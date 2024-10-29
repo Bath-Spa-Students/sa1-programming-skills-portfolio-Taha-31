@@ -25,34 +25,36 @@ bio = {"Name": "",
        "Hometown": "",
        "Age": ""} # dictionary with empty values for Name, Hometown, and Age
 
-is_running = True # Control variable to keep the program running until valid input is provided
+is_running = True # control variable to keep the program running until valid input is provided
 
-while is_running: # Start a loop to prompt for user information until valid input is given
-    print("Enter user information!")  
-    first_name = input("Enter your first name: ") #  User input for first name
-    if first_name.isdigit(): # Check if first name contains digits or not
-        print("Name cannot be in digits.")
-        print("Please enter your information again!")
-    else:
-        second_name = input("Enter your second name: ") # User input for second name
-        if second_name.isdigit(): # Check if second name contains digits or not
-            print("Name cannot be in digits.")
-            print("Please enter your information again!")
-        else:
-            hometown = input("Enter your hometown: ") # User input for hometown
-            if hometown.isdigit(): # Check if hometown contains digits or not 
-                print("Hometown cannot be in digits.")
-                print("Please enter your information again!")
-            else:
-                age = input("Enter your age: ") # User input for age 
-                if age.isdigit(): # check if age is a number 
-                    bio.update({"Name": first_name + " " + second_name, "Hometown": hometown, "Age": age}) #  Update dictionary with our inputs
-                    print("---- YOUR BIOGRAPHY ----")
-                    print(f"Name: {bio["Name"]} \nHometown: {bio["Hometown"]} \nAge: {bio["Age"]}") # Display information from dictionary
-                    is_running = False # Exit loop since all information is valid
-                else:
-                    print("Age should be a number.")
+print("---- BIOGRAPHY ----")
+
+while is_running: # start a loop to prompt for user information until valid input is given
+    print("Enter user information!") 
+    first_name = input("Enter your first name: ") # Asks the user to input their first name
+    if first_name.isalpha(): # checks if first name contains only alphabetic characters or not
+        second_name = input("Enter your second name: ") # asks the user to input second name
+        if second_name.isalpha(): # checks if second name contains only alphabetic characters or not
+            hometown = input("Enter your hometown: ") # Asks the user to input their hometown
+            if hometown.isalpha(): # checks if hometown name contains only alphabetic characters or not
+                age = input("Enter your age: ") # asks the user to input age
+                if age.isdigit(): # checks if age is a number 
+                    bio.update({"Name": first_name + " " + second_name, "Hometown": hometown, "Age": age}) # update dictionary with our inputs
+                    print(f"Name: {bio["Name"]} \nHometown: {bio["Hometown"]} \nAge: {bio["Age"]}") # displays information from the dictionary
+                    is_running = False # exit loop since all information is valid
+                else:  
+                    print("Age should be a number.") # error message if age is not a number
                     print("Please enter your information again")
+            else:
+                print("Hometown cannot be in digits.") # error message if hometown contains digits
+                print("Please enter your information again!")
+        else:
+            print("Name cannot be in digits.") # error message if second name contains digits
+            print("Please enter your information again!")
+    else:
+        print("Name cannot be in digits.") # error message if first name contains digits
+        print("Please enter your information again!")
+
     
 
 
