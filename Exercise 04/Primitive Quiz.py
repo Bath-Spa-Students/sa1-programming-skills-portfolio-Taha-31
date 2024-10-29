@@ -9,12 +9,12 @@
 # 3. If the answer is incorrect, the program should print a message saying the
 # answer is wrong.
 
-Question_1 = input("What is the capital of france?: ")  # asks the user to input the capital of france
+# Question_1 = input("What is the capital of france?: ")  # asks the user to input the capital of france
 
-if Question_1 == "Paris":  # if condition using equals to condition, to check if our answer is equal to paris or not
-    print("Your answer is correct!") # displays our answer is correct
-else: # executes the code if our answer is wrong
-    print("Your answer is wrong.") # displays our answer is wrong
+# if Question_1 == "Paris":  # if condition using equals to condition, to check if our answer is equal to paris or not
+#     print("Your answer is correct!") # displays our answer is correct
+# else: # executes the code if our answer is wrong
+#     print("Your answer is wrong.") # displays our answer is wrong
 
 # Advanced Requirements:
 
