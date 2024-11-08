@@ -39,18 +39,20 @@ for question in questions:  # loops through and displays each question one by on
         print(f"{answers[count]} is the correct answer.")  # Displays the correct answer
     count += 1  # +1 to the count, so the counter can move to the next question
 
-print("------------------")
-print("     RESULTS      ")  # Displays "RESULTS" heading after all questions are answered
-print("------------------")
+print("-------------------------------------------------------------------------------------")
+print("-------------------------------------- RESULTS --------------------------------------")  # Displays "RESULTS" heading after all questions are answered
+print("-------------------------------------------------------------------------------------")
 
 print("answers: ", end="")  # prepares to print all correct answers on the same line
 for answer in answers:  # loops through correct answers
     print(answer, end=" ")  # prints each answer in one line
-print()  # creates a new line
+print()
+print("-------------------------------------------------------------------------------------")  # creates a new line
 print("guesses: ", end="")  # prepares to print all user guesses on the same line
 for guess in guesses:  # loops through user guesses
     print(guess, end=" ")  # prints each guess in one line
-print()  # creates a new line
+print()
+print("-------------------------------------------------------------------------------------")  # creates a new line
 
 score = int(score / len(questions) * 100)  # Calculates score as a percentage
 print(f"Your score is: {score}%")  # displays the user's score as a percentage
