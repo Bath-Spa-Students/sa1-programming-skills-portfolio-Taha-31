@@ -6,11 +6,11 @@
 # 1. Allow the user to input the search term instead of using a predefined value.
 # 2. Implement the search functionality based on user input.
 
-names = ["Jake", "Zac", "Ian", "Ron", "Sam", "Dave"] # list of the names as mentioned in the question
+names_list = ["Jake", "Zac", "Ian", "Ron", "Sam", "Dave"] # list of the names as mentioned in the question
 
-name_search = input("Enter the name you want to search for: ") # asks the user to input the name they're searching for
+search = input("Enter the name you want to search for: ") # asks the user to input the name they're searching for
 
-if name_search in names: 
-    print(f"{name_search} was found in the list.") # if name is found, displays on the screen that the name youre looking for is in the list
+if search in names_list: 
+    print(f"{search} was found in the list.") # if name is found, displays on the screen that the name youre looking for is in the list
 else:
-    print(f"{name_search} was not found in the list.") # if name isnt, displays on the screen that the name youre looking for is NOT in the list
+    print(f"{search} was not found in the list.") # if name isnt, displays on the screen that the name youre looking for is NOT in the list
