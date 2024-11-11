@@ -11,7 +11,7 @@
 
 Question_1 = input("What is the capital of france?: ")  # asks the user to input the capital of france
 
-if Question_1 == "Paris":  # if condition using equals to condition, to check if our answer is equal to paris or not
+if Question_1 == "Paris":            # if condition using equals to condition, to check if our answer is equal to paris or not
     print("Your answer is correct!") # displays our answer is correct
-else: # executes the code if our answer is wrong
-    print("Your answer is wrong.") # displays our answer is wrong
+else:                                # executes the code if our answer is wrong
+    print("Your answer is wrong.")   # displays our answer is wrong
