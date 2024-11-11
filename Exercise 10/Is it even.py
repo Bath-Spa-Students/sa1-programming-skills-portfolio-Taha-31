@@ -22,16 +22,15 @@ def main():   # defines the main function
     print("--------------------------------------------------")
     print("This program checks if your number is even or odd!")     
     print("--------------------------------------------------")
-    while True: # while loop until valid input is given by user
-        try: 
-            num = int(input("Enter your number: "))  # asks the user input for a number
-            result = is_it_even(num)  # result variable that stores whats returned from is_it_even() function
-            print(result) # prints the variable result
-            break
-        except ValueError: # incase the user enters anything besides an integer/float
-            print("------------------------------------") 
-            print("Invalid input, Please enter a digit.")
-            print("------------------------------------")
+    while True: # while loop until valid input is given by user 
+            num = input("Enter your number: ")  # asks the user input for a number
+            if num.isdigit(): # checks if our input is a digit or not
+                num = int(num) # type casts our input into an integer
+                result = is_it_even(num)  # result variable that stores whats returned from is_it_even() function
+                print(result) # prints the variable result
+                break # exit loop
+            else:  # if our input is anything else besides a digit
+                 print("Invalid input, Please enter a digit.")
 
 if __name__ == "__main__":
     main()   # runs the main function
