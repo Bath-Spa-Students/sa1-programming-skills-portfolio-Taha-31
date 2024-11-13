@@ -51,7 +51,5 @@ while is_running:
         is_running = False
     else:
         print("Invalid month number, Please enter a number between 1 and 12") # error given if our input is outside of range
-        break
-
 
 
