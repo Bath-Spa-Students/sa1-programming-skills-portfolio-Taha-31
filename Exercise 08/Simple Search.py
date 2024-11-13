@@ -11,6 +11,6 @@ names_list = ["Jake", "Zac", "Ian", "Ron", "Sam", "Dave"] # list of the names as
 search = input("Enter the name you want to search for: ") # asks the user to input the name they're searching for
 
 if search in names_list: 
-    print(f"{search} was found in the list.") # if name is found, displays on the screen that the name youre looking for is in the list
+    print(f"The name {search} was found in the list.") # if name is found, displays on the screen that the name youre looking for is in the list
 else:
-    print(f"{search} was not found in the list.") # if name isnt, displays on the screen that the name youre looking for is NOT in the list
+    print(f"The name {search} was not found in the list.") # if name isnt, displays on the screen that the name youre looking for is NOT in the list
