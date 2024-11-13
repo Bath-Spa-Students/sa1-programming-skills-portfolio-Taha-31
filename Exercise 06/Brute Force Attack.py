@@ -17,7 +17,7 @@
 # have been alerted.
 
 right_password = "12345" # correct password is defined as a string since there is no comparison operators in the program
-username = input("Enter your username: ")
+username = input("Enter your username: ") # asks the for the username
 
 counter = 0 # counter for tracking the number of attempts
 
