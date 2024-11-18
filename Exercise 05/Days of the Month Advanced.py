@@ -6,9 +6,9 @@
 
 # Advanced Days of the months
 
-days_in_month = {
+month_days = {
     1: 31,
-    2: 29,
+    2: 28,
     3: 31,
     4: 30,
     5: 31,
@@ -38,27 +38,26 @@ is_running = True
 
 while is_running: # start a loop to prompt for month number input until valid input is given
     print("-----------------------------------------------------")
-    month = int(input("Enter the month number you want the days of (1-12): ")) # asks the user to input the month number
+    month_num = int(input("Enter the month number you want the days of (1-12): ")) # asks the user to input the month number
     print("-----------------------------------------------------") 
-    if 1 <= month <= 12: # check if the input is in between 1 and 12
-        if month == 2: # check if February needs a leap year adjustment
+    if 1 <= month_num <= 12: # check if the input is in between 1 and 12
+        if month_num == 2: # check if February needs a leap year adjustment
             leap_year = input("Is it a leap year? (yes/no): ").lower()
             if leap_year == "yes":
-                days = 29
+                month_days.update({2: 29})  
                 print("-----------------------------------------------------")
-                print(f"The number of days in {month_names[month]} is {days}")
+                print(f"The number of days in {month_names[month_num]} is {month_days[month_num]}")
                 print("-----------------------------------------------------")
                 is_running = False # exit loop since everything is valid
             elif leap_year == "no":
-                days = 28
                 print("-----------------------------------------------------")
-                print(f"The number of days in {month_names[month]} is {days}")
+                print(f"The number of days in {month_names[month_num]} is {month_days[month_num]}")
                 print("-----------------------------------------------------")
                 is_running = False # exit loop since everything is valid
             else:
                 print("Enter a valid answer.")
         else:  # print the number of days for months other than February
-            print(f"The number of days in {month_names[month]} is {days_in_month[month]}.")
+            print(f"The number of days in {month_names[month_num]} is {month_days[month_num]}.")
             print("-----------------------------------------------------") 
             is_running = False # exit loop since everything is valid
     else: # else statement if the number inputted is outside of range
