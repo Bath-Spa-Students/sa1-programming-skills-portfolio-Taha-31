@@ -5,7 +5,9 @@
 # the capitalization (e.g., “paris”, “Paris”, and “PaRis” should all be considered
 # correct). Multiple Questions: Extend the program into a quiz that asks for the
 # capitals of 10 European countries. Provide feedback for each question.
-
+#   List = [] ordered and changeable. Duplicates OK
+#   Set = {} unordered and immutable, but Add/Remove OK. NO duplicates
+#   Tuple = () ordered and unchangeable. Duplicates OK. FASTER
 # Advanced Quiz
 
 questions = ("What is the capital of Germany?: ",
