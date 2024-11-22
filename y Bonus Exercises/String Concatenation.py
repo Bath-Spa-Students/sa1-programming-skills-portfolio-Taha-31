@@ -1,10 +1,8 @@
 # Strings Concatenation:
 # Write three strings in different variables and print the output as one string.
 
-student_id = 124129
+student_hometown = "Pakistan"
 student_name = "Taha"
-student_age = 17
+student_sport = "Volleyball"
 
-print("Student id:", student_id,
-      "Student Name:", student_name,
-       "Student Age:", student_age )
+print(f"Student name: {student_name} \nStudent hometown: {student_hometown} \nStudent sports: {student_sport}")
